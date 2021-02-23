@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/background.png" type="Texture" id=1]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/background-frame.png" type="Texture" id=5]
+
+[node name="Main" type="Node"]
+script = ExtResource( 3 )
+
+[node name="BackgroundSprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[node name="background-frame" type="Sprite" parent="."]
+position = Vector2( 187, 352 )
+texture = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 462, 0 )
+
+[node name="background" type="Sprite" parent="Node2D"]
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background2" type="Sprite" parent="Node2D"]
+position = Vector2( 124.667, 0 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background3" type="Sprite" parent="Node2D"]
+position = Vector2( 249.33, 0 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background4" type="Sprite" parent="Node2D"]
+position = Vector2( 374, 0 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background5" type="Sprite" parent="Node2D"]
+position = Vector2( 498.667, 0 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background6" type="Sprite" parent="Node2D"]
+position = Vector2( 0, 234.667 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background7" type="Sprite" parent="Node2D"]
+position = Vector2( 124.667, 234.667 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background8" type="Sprite" parent="Node2D"]
+position = Vector2( 249.33, 234.667 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background9" type="Sprite" parent="Node2D"]
+position = Vector2( 374, 234.667 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background10" type="Sprite" parent="Node2D"]
+position = Vector2( 498.667, 234.667 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background11" type="Sprite" parent="Node2D"]
+position = Vector2( 0, 469.333 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background12" type="Sprite" parent="Node2D"]
+position = Vector2( 124.667, 469.333 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background13" type="Sprite" parent="Node2D"]
+position = Vector2( 249.33, 469.333 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background14" type="Sprite" parent="Node2D"]
+position = Vector2( 374, 469.333 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="background15" type="Sprite" parent="Node2D"]
+position = Vector2( 498.667, 469.333 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+centered = false
+[connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]

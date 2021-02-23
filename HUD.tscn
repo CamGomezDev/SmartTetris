@@ -1,0 +1,210 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/pieces.png" type="Texture" id=1]
+[ext_resource path="res://assets/font/pixelart.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://HUD.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+outline_color = Color( 0.835294, 0.2, 0.2, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 31
+outline_color = Color( 0.835294, 0.2, 0.2, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+outline_color = Color( 0.835294, 0.2, 0.2, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_color = Color( 0.835294, 0.2, 0.2, 1 )
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="PiecesSprite" type="Sprite" parent="."]
+position = Vector2( 22, 550 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Message" type="Label" parent="."]
+anchor_left = 0.221246
+anchor_top = -0.0376364
+anchor_right = 0.221246
+anchor_bottom = -0.0376364
+margin_left = -177.78
+margin_top = 134.03
+margin_right = 95.2197
+margin_bottom = 187.03
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "smart"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Message2" type="Label" parent="."]
+anchor_left = 0.211481
+anchor_top = 0.0421243
+anchor_right = 0.211482
+anchor_bottom = 0.0421243
+margin_left = -177.78
+margin_top = 134.03
+margin_right = 95.2197
+margin_bottom = 187.03
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.862745, 0.219608, 0.219608, 1 )
+text = "tetris"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[node name="StartButton" type="Button" parent="."]
+anchor_left = 0.31
+anchor_top = 0.155
+anchor_right = 0.31
+anchor_bottom = 0.172
+margin_left = -211.657
+margin_top = 270.429
+margin_right = -78.6568
+margin_bottom = 292.461
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "start"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextLabel" type="Label" parent="."]
+margin_left = 390.881
+margin_top = 107.044
+margin_right = 440.881
+margin_bottom = 132.044
+custom_fonts/font = SubResource( 3 )
+text = "next piece"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GenLabel" type="Label" parent="."]
+margin_left = 404.049
+margin_top = 305.591
+margin_right = 431.049
+margin_bottom = 317.591
+custom_fonts/font = SubResource( 3 )
+text = "gen"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gen" type="Label" parent="."]
+margin_left = 382.023
+margin_top = 322.0
+margin_right = 455.023
+margin_bottom = 349.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gen2" type="Label" parent="."]
+margin_left = -154.185
+margin_top = 241.54
+margin_right = -81.1846
+margin_bottom = 268.54
+custom_fonts/font = SubResource( 4 )
+text = "4"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftLabel" type="Label" parent="."]
+margin_left = 383.381
+margin_top = 381.405
+margin_right = 453.381
+margin_bottom = 406.405
+custom_fonts/font = SubResource( 3 )
+text = "members left"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Label" parent="."]
+margin_left = 383.75
+margin_top = 413.0
+margin_right = 448.75
+margin_bottom = 440.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameLabel" type="Label" parent="."]
+margin_left = 377.357
+margin_top = 469.351
+margin_right = 455.357
+margin_bottom = 494.351
+custom_fonts/font = SubResource( 3 )
+text = "game trials"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game" type="Label" parent="."]
+margin_left = 388.955
+margin_top = 502.0
+margin_right = 446.955
+margin_bottom = 529.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 394.693
+margin_top = 562.173
+margin_right = 444.693
+margin_bottom = 574.173
+custom_fonts/font = SubResource( 3 )
+text = "score"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+margin_left = 380.909
+margin_top = 579.0
+margin_right = 454.909
+margin_bottom = 606.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
